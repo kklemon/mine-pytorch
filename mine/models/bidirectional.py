@@ -133,11 +133,9 @@ class BiGAN(pl.LightningModule):
 
         return output
 
-    @pl.data_loader
     def train_dataloader(self):
         return load_dataloader(self.dataset, 256, train=True)
 
-    # @pl.data_loader
     # def val_dataloader(self):
     #     return load_dataloader('mnist', 256, train=False)
 
